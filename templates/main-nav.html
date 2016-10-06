@@ -14,7 +14,8 @@
     <ul class="left hide-on-med-and-down">
       {% for n, p in [('Home','/'),('Blog','/blog'),] %}
         <li{% if p == path  %} class="active"{% endif %}>
-          <a href="{{ p }}">
+          <a href="{{ p }}"
+             class="hoverable">
             {{ n }}
           </a>
         </li>
@@ -25,8 +26,7 @@
     <ul class="side-nav" id="phone-nav">
       {% for name, path in [('Home','/'),('Blog','/blog'),] %}
         <li>
-          <a href="{{ path }}"
-             class="">
+          <a href="{{ path }}">
             {{ name }}
           </a>
         </li>
