@@ -22,7 +22,7 @@ class BaseHandler(webapp2.RequestHandler):
     def get_values(self):
         return {'path': self.request.path}
 
-    
+
 class MainHandler(BaseHandler):
     def get_template(self):
         return jinja_env.get_template('home.html')
@@ -30,7 +30,7 @@ class MainHandler(BaseHandler):
 
 class BlogDirectoryHandler(BaseHandler):
     def get_template(self):
-        return jinja_env.get_template('blog_directory.html')
+        return jinja_env.get_template('blog-directory.html')
 
 
 class BlogPostHandler(BaseHandler):
@@ -39,7 +39,7 @@ class BlogPostHandler(BaseHandler):
         self.response.write(template.render({}))
 
     def get_template(self, post_name):
-        directory = 'blog_posts/' + post_name + '.html'
+        directory = 'blog-posts/' + post_name + '.html'
         return jinja_env.get_template(directory)
 
 

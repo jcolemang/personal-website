@@ -1,34 +1,38 @@
-{% extends 'base_page.html' %}
+{% extends 'base-page.html' %}
 
 {% block title %}Home{% endblock %}
 
-{% block head_block %}
+
+{% block css_block %}
+  <link rel="stylesheet" href="/static/css/home.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
 {% endblock %}
 
 
-{% block content %}
-
+{% block header %}
   <!-- page header with my name and such -->
   <div id="header-div">
     <h1 id="header" class="center">
       James Coleman Gibson
     </h1>
-
-    <h4 id="sub-header" class="center">
+    <h3 id="sub-header" class="center">
       Software Developer
-    </h4>
+    </h3>
   </div>
+{% endblock %}
 
+
+{% block content %}
   <div class="container">
 
-    <hr id="home-hr">
+    <hr class="home-hr">
 
     <!-- Rose-Hulman description -->
     <!-- Pic Description -->
     <div class="">
       <div class="row">
         <div id="rose-image"
-             class="col l12">
+             class="col s12">
           <h2 class="center desc-header">
             Rose-Hulman
           </h2>
