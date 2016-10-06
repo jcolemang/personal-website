@@ -1,0 +1,48 @@
+
+$link-color: rgb(0, 50, 100);
+$link-underline-color: rgb(0, 50, 130);
+$link-fade-in-time: 0.5s;
+$link-fade-in-delay: 0.1s;
+$link-fade-out-time: 1s;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 100px;
+}
+
+a {
+    color: $link-color;
+}
+
+.underline-link {
+
+}
+
+.underline-link-wrapper {
+    display: inline-block;
+}
+
+.underline-link:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0px;
+    margin: 0 auto;
+    transition-duration: $link-fade-out-time;
+}
+
+.underline-link:hover:after {
+    background-color: $link-underline-color;
+    width: 100%;
+    transition-delay: $link-fade-in-delay;
+    transition-duration: $link-fade-in-time;
+}
+
+.clear {
+    clear: both;
+}
+
+.title {
+    text-align: center;
+}
+

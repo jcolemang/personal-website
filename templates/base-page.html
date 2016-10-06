@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Css libraries -->
+    <link rel="stylesheet" href="/static/css/materialize.min.css">
+
+    <!-- Using Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Generated using http://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/static/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/static/images/manifest.json">
+    <link rel="mask-icon" href="/static/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- My Css -->
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/main-nav.css">
+
+    <!-- For any pages inheriting from this one -->
+    {% block css_block %}{% endblock %}
+
+    <!-- Default title -->
+    <title>{% block title %}jcolemang{% endblock %}</title>
+
+  </head>
+
+
+  <body>
+
+    {% include 'main-nav.html' %}
+
+    <div>
+      {% block header %}{% endblock %}
+    </div>
+
+    <div>
+      {% block content %}{% endblock %}
+    </div>
+
+    <div>
+      {% block footer %}{% endblock %}
+    </div>
+
+    <!-- js libraries -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/materialize.min.js"></script>
+
+    <!-- My js -->
+    <script src="/static/js/main.js"></script>
+    {% block js_block %}{% endblock %}
+  </body>
+
+</html>
