@@ -1,0 +1,39 @@
+
+
+<nav id="main-nav" class="blue-grey lighten-1">
+  <div id="main-nav-wrapper" class="nav-wrapper blue-grey lighten-1">
+
+    <a id="phone-menu-icon"
+       href="#"
+       data-activates="phone-nav"
+       class="button-collapse">
+      <i class="material-icons black-text">menu</i>
+    </a>
+
+    <!-- desktop nav -->
+    <ul class="left hide-on-med-and-down">
+      {% for n, p in [('Home','/'),('Blog','/blog'),] %}
+        <li{% if p == path  %} class="active"{% endif %}>
+          <a href="{{ p }}">
+            {{ n }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- mobile nav -->
+    <ul class="side-nav" id="phone-nav">
+      {% for name, path in [('Home','/'),('Blog','/blog'),] %}
+        <li>
+          <a href="{{ path }}"
+             class="">
+            {{ name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+  </div>
+</nav>
+
+{{ url }}

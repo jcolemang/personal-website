@@ -1,0 +1,153 @@
+{% extends 'base_page.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head_block %}
+{% endblock %}
+
+
+{% block content %}
+
+  <!-- page header with my name and such -->
+  <div id="header-div">
+    <h1 id="header" class="center">
+      James Coleman Gibson
+    </h1>
+
+    <h4 id="sub-header" class="center">
+      Software Developer
+    </h4>
+  </div>
+
+  <div class="container">
+
+    <hr id="home-hr">
+
+    <!-- Rose-Hulman description -->
+    <!-- Pic Description -->
+    <div class="">
+      <div class="row">
+        <div id="rose-image"
+             class="col l12">
+          <h2 class="center desc-header">
+            Rose-Hulman
+          </h2>
+          <p class="flow-text desc">
+            I am a junior computer science student at Rose-Hulman
+            Institute of Technology. I am currently taking Programming
+            Language Concepts, Web App Frameworks with App Engine,
+            Software Requirements Engineering, and Intro to Islam.
+          </p>
+        </div>
+
+        <div id="rose-description"
+             class="col l12">
+          <img src="/static/images/rose-bw-photo.jpg"
+               alt="Rose-Hulman Institute of Technology"
+               class="left responsive-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Dev Environment -->
+    <!-- Description pic -->
+    <div class="row">
+      <div id="dev-description"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <h2 class="center desc-header">
+            Dev Environment
+          </h2>
+          <p class="flow-text desc">
+            Currently I am running Arch Linux on my school issued
+            Thinkpad W540. I switched to Arch over the summer from
+            elementary OS, which I used since my initial Ubuntu
+            installation from my freshman year. I write all my code in
+            <a href="https://github.com/jcolemang/Emacs/blob/master/init.el"
+               target="_blank">
+              Emacs
+            </a>
+            using Evil for Vim shortcuts. For most written assignments
+            I use LaTeX.
+          </p>
+        </div>
+      </div>
+
+      <div id="dev-image"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <img src="/static/images/dev-environment.png"
+               alt="I actually use the badwolf theme"
+               class="responsive-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Astronomy club description -->
+    <!-- Description pic -->
+    <div class="row">
+      <div id="astro-image"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <h2 class="center desc-header">
+            Astronomy
+          </h2>
+          <p class="flow-text desc">
+            For the last year I have been the Vice President of the
+            Rose-Hulman Astonomical Society. I do things like help run
+            meetings, track attendance, and help new members use
+            Rose-Hulman's telescopes. My favorite object to observe is
+            the Orion Nebula, but the Dumbell Nebula and Andromeda
+            Galaxy aren't far behind.
+          </p>
+        </div>
+      </div>
+
+      <div id="astro-description"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <img src="/static/images/casa-grande.jpg"
+               alt="Casa Grande"
+               class="responsive-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Hobbies -->
+    <!-- Pic Description -->
+    <div class="row">
+      <div id="hobbies-description"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <h2 class="center desc-header">
+            Hobbies
+          </h2>
+          <p class="flow-text desc">
+            My hobbies include running, reading, art history,
+            photography, and programming, any of which I could talk
+            about for pages at a time. My favorite author is Kurt
+            Vonnegut and my favorite artists are Gustav Klimt and
+            Jackson Pollack. This year I ran with my family in the
+            Dances With Dirt run through
+            Hell, Michigan.
+          </p>
+        </div>
+      </div>
+      <div id="hobbies-image"
+           class="valign-wrapper col l12">
+        <div class="valign">
+          <img src="/static/images/ima.jpg"
+               alt="Indianapolis Museum of Art"
+               class="left responsive-img">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'footer.html' %}
+{% endblock %}
