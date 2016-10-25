@@ -2,6 +2,7 @@
 
 import webapp2
 import os
+import logging
 from jinja2 import Environment, FileSystemLoader
 
 template_path = os.path.join(os.path.dirname(__file__), 'templates')
@@ -22,6 +23,13 @@ class BaseHandler(webapp2.RequestHandler):
     def get_values(self):
         return {'path': self.request.path}
 
+    def page_not_found(self):
+        self.response.write("<h1>Page not found</h1>")
+
+
+class NotFoundHandler(BaseHandler):
+    pass
+
 
 class MainHandler(BaseHandler):
     def get_template(self):
@@ -35,12 +43,18 @@ class BlogDirectoryHandler(BaseHandler):
 
 class BlogPostHandler(BaseHandler):
     def get(self, post_name):
-        template = self.get_template(post_name)
-        self.response.write(template.render({}))
+        post_name = post_name.lower()
+        try:
+            template = self.get_template(post_name)
+            self.response.write(template.render({}))
+        except:
+            logging.error('Error getting post:' + post_name)
+            self.page_not_found()
 
     def get_template(self, post_name):
         directory = 'blog-posts/' + post_name + '.html'
-        return jinja_env.get_template(directory)
+        template = jinja_env.get_template(directory)
+        return template
 
 
 app = webapp2.WSGIApplication([

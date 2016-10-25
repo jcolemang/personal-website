@@ -21,3 +21,14 @@ libraries:
   version: "2.5.2"
 - name: jinja2
   version: latest
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^.*\.scss$
+- ^.*\.css\.map$
+- ^compile-sass.sh$
+- ^README.md$
